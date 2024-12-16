@@ -55,6 +55,7 @@ loadMoreButton.addEventListener('click', async () => {
     gallery(data.hits);
     if (parPage * page >= data.totalHits) {
       loadMore(false);
+      loader.style.display = 'none';
       iziToast.info({
         message: "we're sorry, but you've reached the end of search results.",
       });
